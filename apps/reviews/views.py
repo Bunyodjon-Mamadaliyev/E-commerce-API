@@ -2,7 +2,6 @@ from rest_framework import generics, status
 from rest_framework.permissions import AllowAny
 from rest_framework.response import Response
 from apps.products.models import Product
-from .models import Review
 from .serializers import CreateReviewSerializer, ReviewSerializer
 
 
