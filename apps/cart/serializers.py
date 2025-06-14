@@ -26,3 +26,9 @@ class CartItemSerializer(serializers.ModelSerializer):
         model = CartItem
         fields = ['product', 'quantity', 'subtotal']
         ref_name = 'CartItemSerializer_Cart'
+
+    def create(self, validated_data):
+        product = validated_data["product"]
+        quantity = validated_data.get("quantity", 1)
+        validated_data["subtotal"] = product.price * quantity
+        return super().create(validated_data)

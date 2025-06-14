@@ -1,7 +1,7 @@
 from .base import *  # noqa
 
-ALLOWED_HOSTS = ["*"]
-DEBUG = True
+ALLOWED_HOSTS = ["*", '127.0.0.1', '.vercel.app', 'Bonx.uz']
+DEBUG = False
 CORS_ALLOW_ALL_ORIGINS = True
 
 SWAGGER_SETTINGS = {
