@@ -13,7 +13,7 @@ sys.path.append(os.path.join(BASE_DIR, "apps"))
 load_dotenv(os.path.join(BASE_DIR, ".env"))
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get("SECRET_KEY")
+SECRET_KEY = 'django-insecure-_6h(2&47$x*k&b^vb($p@y^57pkz1(60ab+l%g+h@kj#!g1mjk'
 
 AUTH_USER_MODEL = 'users.User'
 
@@ -28,6 +28,7 @@ BASE_APPS = [
     "django.contrib.staticfiles",
     "django.contrib.postgres",
 ]
+
 THIRD_PARTY_APPS = [
     "rest_framework",
     "corsheaders",
@@ -141,9 +142,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
-
-DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
-
 # Django Rest Framework configurations
 REST_FRAMEWORK = {
     "EXCEPTION_HANDLER": "common.utils.custom_exception_handler.custom_exception_handler",  # noqa
@@ -160,8 +158,9 @@ SIMPLE_JWT = {
     "AUTH_HEADER_TYPES": ("Bearer",),
 }
 
-
 SMS_API_URL = os.environ.get("SMS_API_URL")
 SMS_LOGIN = os.environ.get("SMS_LOGIN")
 SMS_PASSWORD = os.environ.get("SMS_PASSWORD")
 SMS_SENDER_ID = os.environ.get("SMS_SENDER_ID")
+
+DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"

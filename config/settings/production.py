@@ -5,7 +5,9 @@ ALLOWED_HOSTS = [
     "admin.example.com" "localhost",
     "127.0.0.1",
     "server_ip_address",
+    '.vercel.app', 'bonx.uz'
 ]
+
 CSRF_TRUSTED_ORIGINS = ["https://api.example.com", "https://admin.example.com"]
 CORS_ALLOWED_ORIGINS = ["https://api.example.com", "https://admin.example.com"]
 DEBUG = False
